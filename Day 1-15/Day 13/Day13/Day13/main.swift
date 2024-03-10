@@ -244,3 +244,46 @@ import Foundation
 //let numbers3 = ["four": 4, "eight": 8, "fifteen": 15, "sixteen": 16]
 //let allEven3 = numbers3.allSatisfy { $0.value.isMultiple(of: 2) }
 //print(allEven3)
+
+
+
+
+// Checkpoint 8
+
+protocol Building {
+    var rooms: Int { get }
+    var cost: Double { get }
+    var estateAgent: String { get }
+    
+    func printSummary() -> String
+}
+
+struct House: Building {
+    var rooms: Int
+    
+    var cost: Double
+    
+    var estateAgent: String
+    
+    func printSummary() -> String {
+        return "The house has \(rooms) it's cost is: \(cost) related estate agent is: \(estateAgent)"
+    }
+    
+}
+
+var h1 = House(rooms: 3, cost: 400000, estateAgent: "X")
+print(h1.printSummary())
+
+struct Office: Building {
+    var rooms: Int
+    
+    var cost: Double
+    
+    var estateAgent: String
+    
+    func printSummary() -> String {
+        return "The office has \(rooms) it's cost is: \(cost) related estate agent is: \(estateAgent)"
+    }
+    
+    
+}
