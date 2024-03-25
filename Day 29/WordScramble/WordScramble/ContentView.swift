@@ -14,7 +14,6 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showError = false
-    
     @State private var score = 0
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -50,7 +49,7 @@ struct ContentView: View {
                 Text(errorMessage)
             }
             .toolbar {
-                Button("New Game") {
+                Button("New Word") {
                     startGame()
                 }
             }
@@ -73,7 +72,6 @@ struct ContentView: View {
     }
     
     func addNewWord() {
-        // lowercase and trim the word, to make sure we don't add duplicate words with case differences
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
         // exit if the remaining string is empty
@@ -112,7 +110,8 @@ struct ContentView: View {
         
         usedWords.insert(answer, at: 0)
         newWord = ""
-        score += 1
+        
+        score += answer.count
     }
     
     
