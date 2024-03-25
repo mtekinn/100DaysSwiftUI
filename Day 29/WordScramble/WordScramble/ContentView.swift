@@ -75,11 +75,26 @@ struct ContentView: View {
     func addNewWord() {
         // lowercase and trim the word, to make sure we don't add duplicate words with case differences
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-
-        // exit if the remaining string is empty
-        guard answer.count > 0 else { return }
         
-
+        // exit if the remaining string is empty
+        guard answer.count > 0 else {
+            wordError(title: "Word cannot be empty", message: "You should enter valid word!")
+            return
+        }
+        
+        // three letters word check
+        guard answer.count >= 3 else {
+            wordError(title: "Word too short", message: "Word must be at least 3 letters")
+            return
+        }
+        
+        // same word check
+        guard answer != rootWord else {
+            wordError(title: "Same Word!", message: "You cant use same word")
+            return
+        }
+        
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -94,12 +109,12 @@ struct ContentView: View {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
             return
         }
-
+        
         usedWords.insert(answer, at: 0)
         newWord = ""
         score += 1
     }
-
+    
     
     func isOriginal(word: String) -> Bool {
         !usedWords.contains(word)
@@ -119,14 +134,11 @@ struct ContentView: View {
     }
     
     func isReal(word: String) -> Bool {
-        guard word.count < 3 else {
-            let checker = UITextChecker()
-            let range = NSRange(location: 0, length: word.utf16.count)
-            let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-            
-            return misspelledRange.location == NSNotFound
-        }
-        return false
+        let checker = UITextChecker()
+        let range = NSRange(location: 0, length: word.utf16.count)
+        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        
+        return misspelledRange.location == NSNotFound
     }
     
     func wordError(title: String, message: String) {
