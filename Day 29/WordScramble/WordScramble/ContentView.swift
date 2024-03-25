@@ -15,6 +15,10 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showError = false
     
+    @State private var score = 0
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         NavigationStack {
             List {
@@ -23,6 +27,7 @@ struct ContentView: View {
                         .textInputAutocapitalization(.never)
                 }
                 
+                
                 Section {
                     ForEach(usedWords, id: \.self) { word in
                         HStack(alignment: .lastTextBaseline) {
@@ -30,6 +35,10 @@ struct ContentView: View {
                             Text(word)
                         }
                     }
+                }
+                
+                Section {
+                    Text("Your Score: \(score)")
                 }
             }
             .navigationTitle(rootWord)
@@ -40,7 +49,14 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("New Game") {
+                    startGame()
+                }
+            }
         }
+        
+        
     }
     
     func startGame() {
@@ -62,6 +78,7 @@ struct ContentView: View {
 
         // exit if the remaining string is empty
         guard answer.count > 0 else { return }
+        
 
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
@@ -80,6 +97,7 @@ struct ContentView: View {
 
         usedWords.insert(answer, at: 0)
         newWord = ""
+        score += 1
     }
 
     
@@ -101,11 +119,14 @@ struct ContentView: View {
     }
     
     func isReal(word: String) -> Bool {
-        let checker = UITextChecker()
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        
-        return misspelledRange.location == NSNotFound
+        guard word.count < 3 else {
+            let checker = UITextChecker()
+            let range = NSRange(location: 0, length: word.utf16.count)
+            let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+            
+            return misspelledRange.location == NSNotFound
+        }
+        return false
     }
     
     func wordError(title: String, message: String) {
