@@ -17,6 +17,7 @@
 		E1C723092BC9ACA700B77880 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C723082BC9ACA700B77880 /* Bundle-Decodable.swift */; };
 		E1C7230B2BC9D85A00B77880 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C7230A2BC9D85A00B77880 /* Mission.swift */; };
 		E1DC56182BCB3AA80002F43E /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC56172BCB3AA80002F43E /* Color-Theme.swift */; };
+		E1ECA1D72BCD331400693A18 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECA1D62BCD331400693A18 /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E1C723082BC9ACA700B77880 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		E1C7230A2BC9D85A00B77880 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		E1DC56172BCB3AA80002F43E /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		E1ECA1D62BCD331400693A18 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				E1B0DAB42BC5548200B24DC0 /* Preview Content */,
 				E1C7230A2BC9D85A00B77880 /* Mission.swift */,
 				E1DC56172BCB3AA80002F43E /* Color-Theme.swift */,
+				E1ECA1D62BCD331400693A18 /* MissionView.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ECA1D72BCD331400693A18 /* MissionView.swift in Sources */,
 				E1C723072BC9AC3700B77880 /* Astronaut.swift in Sources */,
 				E1DC56182BCB3AA80002F43E /* Color-Theme.swift in Sources */,
 				E1B0DAB12BC5548100B24DC0 /* ContentView.swift in Sources */,
