@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E17E66B82BCF208800022200 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E66B72BCF208800022200 /* AstronautView.swift */; };
 		E1B0DAAF2BC5548100B24DC0 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0DAAE2BC5548100B24DC0 /* MoonshotApp.swift */; };
 		E1B0DAB12BC5548100B24DC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0DAB02BC5548100B24DC0 /* ContentView.swift */; };
 		E1B0DAB32BC5548200B24DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B0DAB22BC5548200B24DC0 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E17E66B72BCF208800022200 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 		E1B0DAAB2BC5548100B24DC0 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B0DAAE2BC5548100B24DC0 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		E1B0DAB02BC5548100B24DC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				E1B0DAAE2BC5548100B24DC0 /* MoonshotApp.swift */,
 				E1C723062BC9AC3700B77880 /* Astronaut.swift */,
+				E17E66B72BCF208800022200 /* AstronautView.swift */,
 				E1C723082BC9ACA700B77880 /* Bundle-Decodable.swift */,
 				E1B0DAB02BC5548100B24DC0 /* ContentView.swift */,
 				E1B0DAB22BC5548200B24DC0 /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 			files = (
 				E1ECA1D72BCD331400693A18 /* MissionView.swift in Sources */,
 				E1C723072BC9AC3700B77880 /* Astronaut.swift in Sources */,
+				E17E66B82BCF208800022200 /* AstronautView.swift in Sources */,
 				E1DC56182BCB3AA80002F43E /* Color-Theme.swift in Sources */,
 				E1B0DAB12BC5548100B24DC0 /* ContentView.swift in Sources */,
 				E1B0DAAF2BC5548100B24DC0 /* MoonshotApp.swift in Sources */,
