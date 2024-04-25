@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var path = [Int]()
+    @State private var title = "SwiftUI"
     
     var body: some View {
-        NavigationStack(path: $path) {
-            DetailView(number: 0, path: $path)
-                .navigationDestination(for: Int.self) { i in
-                    DetailView(number: i, path: $path)
-                }
+        NavigationStack {
+            Text("Hello, World!")
+                .navigationTitle($title)
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
