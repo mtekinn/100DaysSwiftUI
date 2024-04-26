@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var expenses = Expenses()
-    @State private var showingAddExpense = false
+    @Environment(\.dismiss) var dismiss // for dismissing the view
 
     var body: some View {
         NavigationStack {
@@ -23,7 +23,7 @@ struct ContentView: View {
                         }
 
                         Spacer()
-                        Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ??  "USD"))
+                        Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                             .font(.headline)
                             .foregroundColor(item.amount < 10 ? .green : (item.amount < 100 ? .orange : .red)) // Color change as an example of styling
                             .fontWeight(item.amount < 10 ? .regular : (item.amount < 100 ? .medium : .bold)) // Weight change as an example of styling
@@ -33,17 +33,13 @@ struct ContentView: View {
             }
             .navigationTitle("iExpense")
             .toolbar {
-                Button("Add Expense", systemImage: "plus") {
-                    showingAddExpense = true
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink("Add Expense", destination: AddView(expenses: expenses).navigationBarBackButtonHidden(true)) // Explicitly use NavigationLink
                 }
             }
-            .sheet(isPresented: $showingAddExpense) {
-                AddView(expenses: expenses)
-            }
         }
-        
     }
-    
+
     func removeItems(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
     }
