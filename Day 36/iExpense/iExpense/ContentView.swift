@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var expenses = Expenses()
-    @Environment(\.dismiss) var dismiss // for dismissing the view
+    @State private var editableTitle = "iExpense" // Initial title
+    @State private var isEditingTitle = false // State to toggle title editing
 
     var body: some View {
         NavigationStack {
@@ -31,12 +32,28 @@ struct ContentView: View {
                 }
                 .onDelete(perform: removeItems)
             }
-            .navigationTitle("iExpense")
+            .navigationTitle(isEditingTitle ? "" : editableTitle)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink("Add Expense", destination: AddView(expenses: expenses).navigationBarBackButtonHidden(true)) // Explicitly use NavigationLink
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isEditingTitle.toggle()
+                    }) {
+                        Text(isEditingTitle ? "Done" : "Edit Title")
+                    }
                 }
             }
+            .overlay(
+                // Overlay a TextField on top of the navigation bar when editing
+                Group {
+                    if isEditingTitle {
+                        TextField("Enter new title", text: $editableTitle)
+                            .textFieldStyle(.roundedBorder)
+                            .padding()
+                            .transition(.opacity)
+                            .animation(.default, value: isEditingTitle)
+                    }
+                }, alignment: .top
+            )
         }
     }
 
