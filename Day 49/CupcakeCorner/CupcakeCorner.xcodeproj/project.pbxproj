@@ -11,6 +11,7 @@
 		E1A8F8162BDFA46E00CB15D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A8F8152BDFA46E00CB15D5 /* ContentView.swift */; };
 		E1A8F8182BDFA46F00CB15D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A8F8172BDFA46F00CB15D5 /* Assets.xcassets */; };
 		E1A8F81B2BDFA46F00CB15D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A8F81A2BDFA46F00CB15D5 /* Preview Assets.xcassets */; };
+		E1AFAC3B2BEB980C004AA18D /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AFAC3A2BEB980C004AA18D /* CheckoutView.swift */; };
 		E1FAB3D72BEA31D10025F159 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAB3D62BEA31D10025F159 /* Order.swift */; };
 		E1FAB3D92BEA343C0025F159 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAB3D82BEA343C0025F159 /* AddressView.swift */; };
 /* End PBXBuildFile section */
@@ -21,6 +22,7 @@
 		E1A8F8152BDFA46E00CB15D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1A8F8172BDFA46F00CB15D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A8F81A2BDFA46F00CB15D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E1AFAC3A2BEB980C004AA18D /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		E1FAB3D62BEA31D10025F159 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		E1FAB3D82BEA343C0025F159 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,10 +59,11 @@
 			children = (
 				E1A8F8132BDFA46E00CB15D5 /* CupcakeCornerApp.swift */,
 				E1A8F8152BDFA46E00CB15D5 /* ContentView.swift */,
+				E1FAB3D82BEA343C0025F159 /* AddressView.swift */,
+				E1FAB3D62BEA31D10025F159 /* Order.swift */,
+				E1AFAC3A2BEB980C004AA18D /* CheckoutView.swift */,
 				E1A8F8172BDFA46F00CB15D5 /* Assets.xcassets */,
 				E1A8F8192BDFA46F00CB15D5 /* Preview Content */,
-				E1FAB3D62BEA31D10025F159 /* Order.swift */,
-				E1FAB3D82BEA343C0025F159 /* AddressView.swift */,
 			);
 			path = CupcakeCorner;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				E1FAB3D72BEA31D10025F159 /* Order.swift in Sources */,
 				E1FAB3D92BEA343C0025F159 /* AddressView.swift in Sources */,
+				E1AFAC3B2BEB980C004AA18D /* CheckoutView.swift in Sources */,
 				E1A8F8162BDFA46E00CB15D5 /* ContentView.swift in Sources */,
 				E1A8F8142BDFA46E00CB15D5 /* CupcakeCornerApp.swift in Sources */,
 			);
