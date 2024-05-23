@@ -14,13 +14,25 @@ struct AddressView: View {
         Form {
             Section {
                 TextField("Name", text: $order.name)
+                    .onChange(of: order.name) { newValue in
+                        order.name = newValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                    }
                 TextField("Street Address", text: $order.streetAddress)
+                    .onChange(of: order.streetAddress) { newValue in
+                        order.streetAddress = newValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                    }
                 TextField("City", text: $order.city)
+                    .onChange(of: order.city) { newValue in
+                        order.city = newValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                    }
                 TextField("Zip", text: $order.zip)
+                    .onChange(of: order.zip) { newValue in
+                        order.zip = newValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                    }
             }
 
             Section {
-                NavigationLink("Check out") {
+                NavigationLink(destination: CheckoutView(order: order)) {
                     CheckoutView(order: order)
                 }
             }
