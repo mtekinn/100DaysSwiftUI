@@ -11,6 +11,8 @@
 		E168521F2C00003400216D21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E168521E2C00003400216D21 /* ContentView.swift */; };
 		E16852212C00003500216D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16852202C00003500216D21 /* Assets.xcassets */; };
 		E16852242C00003500216D21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16852232C00003500216D21 /* Preview Assets.xcassets */; };
+		E196AD412C04E8D3002A385A /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E196AD402C04E8D3002A385A /* PushButton.swift */; };
+		E196AD432C04EA54002A385A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = E196AD422C04EA54002A385A /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E168521E2C00003400216D21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E16852202C00003500216D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E16852232C00003500216D21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E196AD402C04E8D3002A385A /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
+		E196AD422C04EA54002A385A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				E168521E2C00003400216D21 /* ContentView.swift */,
 				E16852202C00003500216D21 /* Assets.xcassets */,
 				E16852222C00003500216D21 /* Preview Content */,
+				E196AD402C04E8D3002A385A /* PushButton.swift */,
+				E196AD422C04EA54002A385A /* Student.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				E168521F2C00003400216D21 /* ContentView.swift in Sources */,
 				E168521D2C00003400216D21 /* BookwormApp.swift in Sources */,
+				E196AD412C04E8D3002A385A /* PushButton.swift in Sources */,
+				E196AD432C04EA54002A385A /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
