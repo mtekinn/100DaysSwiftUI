@@ -16,9 +16,10 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = "Fantasy"
     @State private var review = ""
+    @State private var showingAlert = false
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
-
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -40,13 +41,23 @@ struct AddBookView: View {
                 
                 Section {
                     Button("Save") {
-                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
-                        modelContext.insert(newBook)
-                        dismiss()
+                        if title.isEmpty || author.isEmpty || genre.isEmpty {
+                            showingAlert = true
+                        } else {
+                            let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
+                            modelContext.insert(newBook)
+                            dismiss()
+                            
+                        }
                     }
                 }
             }
             .navigationTitle("Add Book")
+            .alert("Validation error", isPresented: $showingAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text("Please fill in all fields.")
+            }
         }
     }
 }

@@ -61,15 +61,15 @@
 		E168521B2C00003400216D21 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
-				E168521C2C00003400216D21 /* BookwormApp.swift */,
 				E15B67CC2C06896D006CB179 /* AddBookView.swift */,
 				E15B67CA2C067FE1006CB179 /* Book.swift */,
-				E13ACBDD2C074EF80031ECAC /* RatingView.swift */,
-				E13ACBDF2C0750D90031ECAC /* EmojiRatingView.swift */,
+				E168521C2C00003400216D21 /* BookwormApp.swift */,
 				E168521E2C00003400216D21 /* ContentView.swift */,
+				E10404E42C1360A700BBC4E0 /* DetailView.swift */,
+				E13ACBDF2C0750D90031ECAC /* EmojiRatingView.swift */,
+				E13ACBDD2C074EF80031ECAC /* RatingView.swift */,
 				E16852202C00003500216D21 /* Assets.xcassets */,
 				E16852222C00003500216D21 /* Preview Content */,
-				E10404E42C1360A700BBC4E0 /* DetailView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
