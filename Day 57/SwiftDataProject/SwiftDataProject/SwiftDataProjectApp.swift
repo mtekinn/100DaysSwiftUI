@@ -28,5 +28,6 @@ struct SwiftDataProjectApp: App {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+        .modelContainer(for: User.self)
     }
 }
