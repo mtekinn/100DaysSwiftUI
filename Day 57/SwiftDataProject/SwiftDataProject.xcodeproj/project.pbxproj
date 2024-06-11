@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14F3DA02C18A0BC0089E4BD /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F3D9F2C18A0BC0089E4BD /* Job.swift */; };
+		E16894112C189ADE0001E671 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16894102C189ADE0001E671 /* UsersView.swift */; };
 		E18509A22C15E360005C46D0 /* SwiftDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18509A12C15E360005C46D0 /* SwiftDataProjectApp.swift */; };
 		E18509A42C15E360005C46D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18509A32C15E360005C46D0 /* ContentView.swift */; };
-		E18509A62C15E360005C46D0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18509A52C15E360005C46D0 /* Item.swift */; };
 		E18509A82C15E361005C46D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18509A72C15E361005C46D0 /* Assets.xcassets */; };
 		E18509AB2C15E361005C46D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18509AA2C15E361005C46D0 /* Preview Assets.xcassets */; };
 		E1850A452C172BB4005C46D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1850A442C172BB4005C46D0 /* User.swift */; };
-		E1850A472C172C69005C46D0 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1850A462C172C69005C46D0 /* EditUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E14F3D9F2C18A0BC0089E4BD /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		E14F3DA12C18A2100089E4BD /* SwiftDataProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDataProject.entitlements; sourceTree = "<group>"; };
+		E14F3DA22C18A3660089E4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E16894102C189ADE0001E671 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		E185099E2C15E360005C46D0 /* SwiftDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18509A12C15E360005C46D0 /* SwiftDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataProjectApp.swift; sourceTree = "<group>"; };
 		E18509A32C15E360005C46D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E18509A52C15E360005C46D0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E18509A72C15E361005C46D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E18509AA2C15E361005C46D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1850A442C172BB4005C46D0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E1850A462C172C69005C46D0 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +59,15 @@
 		E18509A02C15E360005C46D0 /* SwiftDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				E14F3DA22C18A3660089E4BD /* Info.plist */,
+				E14F3DA12C18A2100089E4BD /* SwiftDataProject.entitlements */,
 				E18509A12C15E360005C46D0 /* SwiftDataProjectApp.swift */,
 				E18509A32C15E360005C46D0 /* ContentView.swift */,
-				E18509A52C15E360005C46D0 /* Item.swift */,
+				E16894102C189ADE0001E671 /* UsersView.swift */,
+				E1850A442C172BB4005C46D0 /* User.swift */,
+				E14F3D9F2C18A0BC0089E4BD /* Job.swift */,
 				E18509A72C15E361005C46D0 /* Assets.xcassets */,
 				E18509A92C15E361005C46D0 /* Preview Content */,
-				E1850A442C172BB4005C46D0 /* User.swift */,
-				E1850A462C172C69005C46D0 /* EditUserView.swift */,
 			);
 			path = SwiftDataProject;
 			sourceTree = "<group>";
@@ -147,10 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1850A452C172BB4005C46D0 /* User.swift in Sources */,
-				E1850A472C172C69005C46D0 /* EditUserView.swift in Sources */,
 				E18509A42C15E360005C46D0 /* ContentView.swift in Sources */,
-				E18509A62C15E360005C46D0 /* Item.swift in Sources */,
 				E18509A22C15E360005C46D0 /* SwiftDataProjectApp.swift in Sources */,
+				E16894112C189ADE0001E671 /* UsersView.swift in Sources */,
+				E14F3DA02C18A0BC0089E4BD /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,12 +285,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftDataProject/SwiftDataProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
 				DEVELOPMENT_TEAM = TNY32NLQ4N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftDataProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,12 +316,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftDataProject/SwiftDataProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
 				DEVELOPMENT_TEAM = TNY32NLQ4N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftDataProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
