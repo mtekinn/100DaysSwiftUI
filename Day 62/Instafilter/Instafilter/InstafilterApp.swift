@@ -1,15 +1,14 @@
 //
-//  iExpenseApp.swift
-//  iExpense
+//  InstafilterApp.swift
+//  Instafilter
 //
-//  Created by Mehmet Tekin on 30.03.2024.
+//  Created by Mehmet Tekin on 17.06.2024.
 //
 
 import SwiftUI
-import SwiftData
 
 @main
-struct iExpenseApp: App {
+struct InstafilterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
