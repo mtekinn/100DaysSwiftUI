@@ -6,40 +6,16 @@
 //
 
 import SwiftUI
-import PhotosUI
+import StoreKit
 
 struct ContentView: View {
-    @State private var pickerItem: PhotosPickerItem?
-    @State private var selectedImage: Image?
-    @State private var pickerItems = [PhotosPickerItem]()
-    @State private var selectedImages = [Image]()
-
+    @Environment(\.requestReview) var requestReview
+    
     var body: some View {
-        VStack {
-            PhotosPicker(selection: $pickerItems, maxSelectionCount: 3, matching: .any(of: [.images, .not(.screenshots)])) {
-                Label("Select a picture", systemImage: "photo")
-            }
-            ScrollView {
-                ForEach(0..<selectedImages.count, id: \.self) { i in
-                    selectedImages[i]
-                        .resizable()
-                        .scaledToFit()
-                }
-            }
-        }
-        .onChange(of: pickerItem) {
-            Task {
-                selectedImages.removeAll()
-                
-                for item in pickerItems {
-                    if let loadedImage = try await item.loadTransferable(type: Image.self) {
-                        selectedImages.append(loadedImage)
-                    }
-                }
-            }
+        Button("Leave a review") {
+            requestReview()
         }
     }
-    
 }
 
 #Preview {
